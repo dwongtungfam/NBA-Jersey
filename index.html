@@ -1,80 +1,431 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop Jersey</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Jersey Collection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- NBA Theme CSS -->
+    <link rel="stylesheet" href="nba-theme.css">
 </head>
 <body>
+    <!-- Header với logo NBA -->
+    <header class="nba-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <div class="d-flex align-items-center">
+                    <img src="https://cdn.nba.com/logos/nba/nba-logoman-75-word_white.svg" alt="NBA Logo" height="40" class="me-2">
+                    <h1 class="h3 mb-0 text-white">Jersey Collection</h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <div class="container my-4">
-    <h2 class="mb-4">Danh sách sản phẩm</h2>
-    <div class="row g-4">
-      <!-- Product 1 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm" onclick="showProduct('Áo DragonBall Z', '350.000đ', 'images/product1-1.jpg')">
-          <img src="images/product1-1.jpg" class="card-img-top" alt="DragonBall Z">
-          <div class="card-body">
-            <h5 class="card-title">Áo DragonBall Z</h5>
-            <p class="card-text">Giá: 350.000đ</p>
-          </div>
+    <div class="container my-4">
+        <h2 class="mb-4 nba-section-title">NBA Jerseys</h2>
+        <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product1')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product1-1.jpg" class="card-img-top" alt="DragonBall Z">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">DragonBall Z Jersey</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product2')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product2-1.jpg" class="card-img-top" alt="NBA Lakers">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">NBA Lakers Jersey</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product3')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product3-1.jpg" class="card-img-top" alt="Chicago Bulls">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">Chicago Bulls Jersey</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product4')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product4-1.jpg" class="card-img-top" alt="Los Angeles Lakers">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">Los Angeles Lakers Jersey</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product5')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product5-1.jpg" class="card-img-top" alt="M&N Slap Sticker NBA Milwaukee Bucks">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">M&N Slap Sticker NBA Milwaukee Bucks Jersey</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product6')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product6-1.jpg" class="card-img-top" alt="M&N Slap Sticker NBA Boston Celtic">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">M&N Slap Sticker NBA Boston Celtic Jersey</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product7')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product7-1.jpg" class="card-img-top" alt="M&N Slap Sticker NBA Orlando Magic">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">M&N Slap Sticker NBA Orlando Magic Jersey</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product8')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product8-1.jpg" class="card-img-top" alt="M&N Slap Sticker NBA Memphis Grizzlies">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">M&N Slap Sticker NBA Memphis Grizzlies Jersey</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 9 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product9')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product9-1.jpg" class="card-img-top" alt="M&N Slap Sticker NBA Toronto Raptors">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">M&N Slap Sticker NBA Toronto Raptors Jersey</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product10')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product10-1.jpg" class="card-img-top" alt="M&N NBA Chicago Bulls Sketch - Michael Jordan">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">M&N NBA Chicago Bulls Sketch - Michael Jordan Jersey</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 11 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product11')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product11-1.jpg" class="card-img-top" alt="M&N NBA LosAngeles Lakers Sketch - Kobe Bryant">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">M&N NBA LosAngeles Lakers Sketch - Kobe Bryant Jersey</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 12 -->
+            <div class="col-md-4">
+                <div class="card nba-card h-100 shadow-sm" onclick="showProduct('product12')">
+                    <div class="nba-card-img-container">
+                        <img src="images/product12-1.jpg" class="card-img-top" alt="NBA Phoenix Suns City Edition">
+                        <div class="nba-team-logo">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title nba-product-title">NBA Phoenix Suns City Edition Jersey</h5>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- Product 2 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm" onclick="showProduct('Áo NBA Lakers', '420.000đ', 'images/product2-1.jpg')">
-          <img src="images/product2-1.jpg" class="card-img-top" alt="NBA Lakers">
-          <div class="card-body">
-            <h5 class="card-title">Áo NBA Lakers</h5>
-            <p class="card-text">Giá: 420.000đ</p>
-          </div>
-        </div>
-      </div>
-      <!-- Product 3 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm" onclick="showProduct('Áo Chicago Bulls', '399.000đ', 'images/product3-1.jpg')">
-          <img src="images/product3-1.jpg" class="card-img-top" alt="Chicago Bulls">
-          <div class="card-body">
-            <h5 class="card-title">Áo Chicago Bulls</h5>
-            <p class="card-text">Giá: 399.000đ</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitle"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content nba-modal">
+                <div class="modal-header nba-modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="btn-close nba-close-btn" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <img id="modalImage" src="" class="main-image img-fluid mb-3">
+                        </div>
+                        <div class="col-md-6 product-info">
+                            <h6 class="nba-table-title">Size Chart:</h6>
+                            <table class="size-table">
+                                <thead>
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Height (cm)</th>
+                                        <th>Weight (Kg)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>S</td>
+                                        <td>165 - 170</td>
+                                        <td>50 - 65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>M</td>
+                                        <td>171 - 175</td>
+                                        <td>66 - 75</td>
+                                    </tr>
+                                    <tr>
+                                        <td>L</td>
+                                        <td>> 180</td>
+                                        <td>76 - 85</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XL</td>
+                                        <td>> 185</td>
+                                        <td>86 - 95</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="thumbnail-container" id="thumbnailsContainer">
+                                <!-- Thumbnails will be added by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer nba-modal-footer">
+                    <button type="button" class="btn nba-btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body text-center">
-          <img id="modalImage" src="" class="img-fluid mb-3" style="max-height:300px">
-          <p id="modalPrice" class="fs-5 fw-bold"></p>
-          <p>Kích thước: M, L, XL<br>Khuyến nghị: cao 1m70 mặc size L</p>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <script>
-    function showProduct(name, price, image) {
-      document.getElementById("modalTitle").innerText = name;
-      document.getElementById("modalPrice").innerText = "Giá: " + price;
-      document.getElementById("modalImage").src = image;
+    <!-- Footer -->
+    <footer class="nba-footer mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="center">
+                    <h5>NBA Jersey Collection</h5>
+                    <p>NBA jersey collection and special editions.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-      let myModal = new bootstrap.Modal(document.getElementById('productModal'));
-      myModal.show();
-    }
-  </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Dữ liệu sản phẩm
+        const products = {
+            product1: {
+                name: 'DragonBall Z Jersey',
+                images: [
+                    'images/product1-1.jpg',
+                    'images/product1-2.jpg',
+                    'images/product1-3.jpg',
+                    'images/product1-4.jpg'
+                ]
+            },
+            product2: {
+                name: 'NBA Lakers Jersey',
+                images: [
+                    'images/product2-1.jpg',
+                    'images/product2-2.jpg',
+                    'images/product2-3.jpg',
+                    'images/product2-4.jpg'
+                ]
+            },
+            product3: {
+                name: 'Chicago Bulls Jersey',
+                images: [
+                    'images/product3-1.jpg',
+                    'images/product3-2.jpg',
+                    'images/product3-3.jpg',
+                    'images/product3-4.jpg'
+                ]
+            },
+            product4: {
+                name: 'Los Angeles Lakers Jersey',
+                images: [
+                    'images/product4-1.jpg',
+                    'images/product4-2.jpg',
+                    'images/product4-3.jpg',
+                    'images/product4-4.jpg'
+                ]
+            },
+            product5: {
+                name: 'M&N Slap Sticker NBA Milwaukee Bucks Jersey',
+                images: [
+                    'images/product5-1.jpg',
+                    'images/product5-2.jpg',
+                    'images/product5-3.jpg',
+                    'images/product5-4.jpg'
+                ]
+            },
+            product6: {
+                name: 'M&N Slap Sticker NBA Boston Celtic Jersey',
+                images: [
+                    'images/product6-1.jpg',
+                    'images/product6-2.jpg',
+                    'images/product6-3.jpg',
+                    'images/product6-4.jpg'
+                ]
+            },
+            product7: {
+                name: 'M&N Slap Sticker NBA Orlando Magic Jersey',
+                images: [
+                    'images/product7-1.jpg',
+                    'images/product7-2.jpg',
+                    'images/product7-3.jpg',
+                    'images/product7-4.jpg'
+                ]
+            },
+            product8: {
+                name: 'M&N Slap Sticker NBA Memphis Grizzlies Jersey',
+                images: [
+                    'images/product8-1.jpg',
+                    'images/product8-2.jpg',
+                    'images/product8-3.jpg',
+                    'images/product8-4.jpg'
+                ]
+            },
+            product9: {
+                name: 'M&N Slap Sticker NBA Toronto Raptors Jersey',
+                images: [
+                    'images/product9-1.jpg',
+                    'images/product9-2.jpg',
+                    'images/product9-3.jpg',
+                    'images/product9-4.jpg'
+                ]
+            },
+            product10: {
+                name: 'M&N NBA Chicago Bulls Sketch - Michael Jordan Jersey',
+                images: [
+                    'images/product10-1.jpg',
+                    'images/product10-2.jpg',
+                    'images/product10-3.jpg',
+                    'images/product10-4.jpg'
+                ]
+            },
+            product11: {
+                name: 'M&N NBA LosAngeles Lakers Sketch - Kobe Bryant Jersey',
+                images: [
+                    'images/product11-1.jpg',
+                    'images/product11-2.jpg',
+                    'images/product11-3.jpg',
+                    'images/product11-4.jpg'
+                ]
+            },
+            product12: {
+                name: 'NBA Phoenix Suns City Edition Jersey',
+                images: [
+                    'images/product12-1.jpg',
+                    'images/product12-2.jpg',
+                    'images/product12-3.jpg',
+                    'images/product12-4.jpg'
+                ]
+            }
+        };
+
+        function showProduct(productId) {
+            const product = products[productId];
+
+            // Cập nhật thông tin modal
+            document.getElementById("modalTitle").innerText = product.name;
+            document.getElementById("modalImage").src = product.images[0];
+
+            // Tạo các ảnh nhỏ
+            const thumbnailsContainer = document.getElementById("thumbnailsContainer");
+            thumbnailsContainer.innerHTML = ''; // Xóa ảnh cũ
+
+            product.images.forEach((image, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.src = image;
+                thumbnail.alt = `Image ${index + 1}`;
+                thumbnail.className = 'thumbnail';
+                if (index === 0) thumbnail.classList.add('active');
+
+                thumbnail.addEventListener('click', function () {
+                    // Cập nhật ảnh chính
+                    document.getElementById("modalImage").src = image;
+
+                    // Cập nhật trạng thái active
+                    document.querySelectorAll('.thumbnail').forEach(thumb => {
+                        thumb.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
+
+                thumbnailsContainer.appendChild(thumbnail);
+            });
+
+            // Hiển thị modal
+            let myModal = new bootstrap.Modal(document.getElementById('productModal'));
+            myModal.show();
+        }
+    </script>
 
 </body>
 </html>

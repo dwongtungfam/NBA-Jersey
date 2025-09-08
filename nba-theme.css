@@ -1,0 +1,269 @@
+﻿/* NBA Theme CSS */
+:root {
+	--nba-blue: #1d428a;
+	--nba-red: #c8102e;
+	--nba-silver: #c4ced4;
+	--nba-dark: #041e42;
+}
+
+body {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	background-color: #f8f9fa;
+	color: #333;
+}
+
+/* Header Styles */
+.nba-header {
+	background: linear-gradient(to right, var(--nba-blue), var(--nba-dark));
+	color: white;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Title */
+.nba-section-title {
+	color: var(--nba-blue);
+	font-weight: 700;
+	text-transform: uppercase;
+	position: relative;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+	.nba-section-title::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 3px;
+		background-color: var(--nba-red);
+	}
+
+/* Card Styles */
+.nba-card {
+	border: none;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: transform 0.3s, box-shadow 0.3s;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+	.nba-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+	}
+
+.nba-card-img-container {
+	position: relative;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.nba-team-logo {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+	background-color: var(--nba-red);
+	color: white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+}
+
+/* Căn giữa nội dung thẻ */
+.nba-card .card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	padding: 1.25rem;
+	text-align: center;
+}
+
+.nba-product-title {
+	color: var(--nba-dark);
+	font-weight: 600;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 60px; /* Chiều cao tối thiểu để căn giữa đẹp hơn */
+	line-height: 1.4;
+}
+
+/* Modal Styles */
+.nba-modal {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.nba-modal-header {
+	background: linear-gradient(to right, var(--nba-blue), var(--nba-dark));
+	color: white;
+}
+
+.nba-close-btn {
+	filter: invert(1);
+}
+
+.nba-table-title {
+	color: var(--nba-blue);
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.size-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 15px;
+	font-size: 14px;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+	.size-table th {
+		background-color: var(--nba-blue);
+		color: white;
+		padding: 10px;
+		text-align: center;
+	}
+
+	.size-table td {
+		padding: 10px;
+		text-align: center;
+		border-bottom: 1px solid #dee2e6;
+	}
+
+	.size-table tr:nth-child(even) {
+		background-color: #f8f9fa;
+	}
+
+	.size-table tr:hover {
+		background-color: #e9ecef;
+	}
+
+.recommendation {
+	background-color: #e9ecef;
+	padding: 12px;
+	border-radius: 8px;
+	margin-top: 15px;
+	font-size: 14px;
+	border-left: 4px solid var(--nba-red);
+}
+
+.thumbnail-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 15px;
+	justify-content: center;
+}
+
+.thumbnail {
+	width: 70px;
+	height: 70px;
+	object-fit: cover;
+	cursor: pointer;
+	border: 2px solid transparent;
+	transition: border-color 0.3s;
+	border-radius: 5px;
+}
+
+	.thumbnail:hover, .thumbnail.active {
+		border-color: var(--nba-red);
+	}
+
+.main-image {
+	max-height: 400px;
+	object-fit: contain;
+	border-radius: 8px;
+}
+
+/* Modal Footer Buttons */
+.nba-modal-footer {
+	background-color: #f8f9fa;
+	display: flex;
+	justify-content: center;
+}
+
+.nba-btn-secondary {
+	background-color: var(--nba-silver);
+	border-color: var(--nba-silver);
+	color: var(--nba-dark);
+	min-width: 120px;
+}
+
+	.nba-btn-secondary:hover {
+		background-color: #a7b3ba;
+		border-color: #a7b3ba;
+	}
+
+/* Footer Styles */
+.nba-footer {
+	background: linear-gradient(to right, var(--nba-dark), var(--nba-blue));
+	color: white;
+	text-align: center;
+}
+
+	.nba-footer h5 {
+		color: var(--nba-silver);
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+
+.nba-footer-divider {
+	border-color: rgba(255, 255, 255, 0.2);
+	margin: 20px 0;
+}
+
+.nba-social-icons {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+}
+
+	.nba-social-icons a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		background-color: rgba(255, 255, 255, 0.1);
+		color: white;
+		border-radius: 50%;
+		transition: background-color 0.3s;
+	}
+
+		.nba-social-icons a:hover {
+			background-color: var(--nba-red);
+			text-decoration: none;
+		}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.nba-header .d-flex {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.nba-footer .row > div {
+		margin-bottom: 30px;
+	}
+
+	.nba-product-title {
+		min-height: 50px;
+		font-size: 0.9rem;
+	}
+}
