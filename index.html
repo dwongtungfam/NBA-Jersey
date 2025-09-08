@@ -2,91 +2,79 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Shop Jersey NBA</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-    .name {
-      font-size: 18px;
-      margin: 10px 0;
-      font-weight: bold;
-    }
-    .price {
-      color: red;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .old-price {
-      text-decoration: line-through;
-      color: gray;
-      margin-left: 8px;
-    }
-    .size {
-      margin-top: 10px;
-      font-size: 14px;
-    }
-    .recommend {
-      background: #f2f2f2;
-      padding: 8px;
-      margin-top: 10px;
-      border-radius: 5px;
-      font-size: 13px;
-      color: #444;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Jersey</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <h1>🏀 Shop Jersey NBA</h1>
-  <div class="grid">
 
-    <!-- Card sản phẩm -->
-    <div class="card">
-      <img src="https://via.placeholder.com/300x400.png?text=Jersey+1" alt="Jersey 1">
-      <div class="name">Áo DragonBall Z</div>
-      <div>
-        <span class="price">350.000đ</span>
-        <span class="old-price">400.000đ</span>
+  <div class="container my-4">
+    <h2 class="mb-4">Danh sách sản phẩm</h2>
+    <div class="row g-4">
+      <!-- Product 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm" onclick="showProduct('Áo DragonBall Z', '350.000đ', 'images/product1-1.jpg')">
+          <img src="images/product1-1.jpg" class="card-img-top" alt="DragonBall Z">
+          <div class="card-body">
+            <h5 class="card-title">Áo DragonBall Z</h5>
+            <p class="card-text">Giá: 350.000đ</p>
+          </div>
+        </div>
       </div>
-      <div class="size">Size: M, L, XL</div>
-      <div class="recommend">👉 Cao 1m65–1m72: chọn M<br>👉 Cao 1m73–1m80: chọn L<br>👉 Cao >1m80: chọn XL</div>
-    </div>
-
-    <!-- Card sản phẩm khác -->
-    <div class="card">
-      <img src="https://via.placeholder.com/300x400.png?text=Jersey+2" alt="Jersey 2">
-      <div class="name">Áo Chicago Bulls</div>
-      <div>
-        <span class="price">280.000đ</span>
-        <span class="old-price">350.000đ</span>
+      <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm" onclick="showProduct('Áo NBA Lakers', '420.000đ', 'images/product2-1.jpg')">
+          <img src="images/product2-1.jpg" class="card-img-top" alt="NBA Lakers">
+          <div class="card-body">
+            <h5 class="card-title">Áo NBA Lakers</h5>
+            <p class="card-text">Giá: 420.000đ</p>
+          </div>
+        </div>
       </div>
-      <div class="size">Size: S, M, L</div>
-      <div class="recommend">👉 Cao 1m55–1m65: chọn S<br>👉 Cao 1m66–1m75: chọn M<br>👉 Cao >1m75: chọn L</div>
+      <!-- Product 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm" onclick="showProduct('Áo Chicago Bulls', '399.000đ', 'images/product3-1.jpg')">
+          <img src="images/product3-1.jpg" class="card-img-top" alt="Chicago Bulls">
+          <div class="card-body">
+            <h5 class="card-title">Áo Chicago Bulls</h5>
+            <p class="card-text">Giá: 399.000đ</p>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalImage" src="" class="img-fluid mb-3" style="max-height:300px">
+          <p id="modalPrice" class="fs-5 fw-bold"></p>
+          <p>Kích thước: M, L, XL<br>Khuyến nghị: cao 1m70 mặc size L</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    function showProduct(name, price, image) {
+      document.getElementById("modalTitle").innerText = name;
+      document.getElementById("modalPrice").innerText = "Giá: " + price;
+      document.getElementById("modalImage").src = image;
+
+      let myModal = new bootstrap.Modal(document.getElementById('productModal'));
+      myModal.show();
+    }
+  </script>
+
 </body>
 </html>
